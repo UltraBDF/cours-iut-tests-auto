@@ -1,16 +1,12 @@
-package com.example.bar;
+package com.example.bar.model;
 
 public class Drink {
-    private String name;
-    private double price;
+    private final String name;
+    private final double price;
 
     public Drink(String name, double price) {
         this.name = name;
         this.price = price;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public double getPrice() {
