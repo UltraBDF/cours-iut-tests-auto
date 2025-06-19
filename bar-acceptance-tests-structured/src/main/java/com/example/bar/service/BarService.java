@@ -1,12 +1,12 @@
 package com.example.bar.service;
 
+import java.util.List;
+import java.util.NoSuchElementException;
+
 import com.example.bar.exception.BarException;
 import com.example.bar.model.Bar;
 import com.example.bar.model.Client;
 import com.example.bar.model.Drink;
-
-import java.util.List;
-import java.util.NoSuchElementException;
 
 public class BarService {
     private final Bar bar;
@@ -56,7 +56,7 @@ public class BarService {
         Drink drink = bar.getDrink(drinkName)
             .orElseThrow(() -> new NoSuchElementException("Drink not on menu: " + drinkName));
         
-        consumer.consume(); // The consumer drinks it...
-        payer.getBill().add(drink.getPrice()); // ...but the payer pays for it.
+        consumer.consume(); 
+        payer.getBill().add(drink.getPrice()); 
     }
 }
