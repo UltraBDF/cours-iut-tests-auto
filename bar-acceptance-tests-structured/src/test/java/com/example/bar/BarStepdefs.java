@@ -96,7 +96,7 @@ public class BarStepdefs {
 
     @Then("the person behind them should be refused entry")
     public void the_person_behind_them_should_be_refused_entry() {
-        // C'est validé par l'étape précédente, cette étape est pour la lisibilité.
+        // Cette étape est pour la lisibilité.
     }
 
     @Then("the bar should now be full")
